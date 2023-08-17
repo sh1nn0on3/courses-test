@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { CourseContext } from "../../contexts/course-context";
 import CourseApi from "../../api/profile";
 import { useSelector } from "react-redux";
+import home from "../../assets/img/homee.png";
+
 
 const IconHeader = () => {
   const navigate = useNavigate();
@@ -27,8 +29,9 @@ const IconHeader = () => {
           navigate("/");
         }}
       >
-        <i className="fa-solid fa-house text-pink-400"></i>
-        <p className="text-[10px] mt-1 font-bold text-gray-300 ">Home</p>
+        {/* <i className="fa-solid fa-house text-pink-400"></i> */}
+        <img src={home} className="w-[28px] mb-2" alt="#" />
+        <p className="text-[10px] mt-1 font-bold text-gray-300 text-center ">Home</p>
       </div>
       <div
         className="cursor-pointer hover:text-gray-300 transition-all"

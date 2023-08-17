@@ -181,3 +181,18 @@ body {
 .textEdit {
   font-family: "Playfair Display", serif;
 }
+
+
+.font {
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+.text-gradient {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  background: linear-gradient(to right, #56ccf2, #f79df2);
+  -webkit-background-clip: text;
+  color: transparent;
+}

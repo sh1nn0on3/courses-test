@@ -27,45 +27,38 @@ export const HomeChallenge = () => {
 
   return (
     <div className="w-full bg-[#0F102E] min-h-[calc(100vh-6rem)] snap-center flex justify-center ">
-      <div className="max-w-[1200px] w-full flex flex-col gap-3 mt-[100px] items-center">
-        <div className="border w-full max-w-[1000px] px-5 py-3 ">
-          <h1 className="text-[20px] text-white textEdit">
-            Hướng dẫn sử dụng cho ứng dụng XYZ
-          </h1>
-          <div className="mt-3">
-            <h1 className="text-gray-300">I. Giới thiệu</h1>
-            <p className="text-gray-400 text-[14px] pl-2">
-              Ứng dụng XYZ là một ứng dụng tiện ích được thiết kế để giúp bạn
-              thực hiện công việc một cách hiệu quả và tiết kiệm thời gian. Ứng
-              dụng cung cấp nhiều tính năng hữu ích, như ABC, DEF và GHI, giúp
-              bạn đáp ứng các yêu cầu công việc hàng ngày một cách dễ dàng.
-            </p>
-          </div>
-          <div className="mt-3">
-            <h1 className="text-gray-300">II. Cài đặt ứng dụng XYZ</h1>
-            <ul className="text-gray-400 text-[14px] px-2">
-              <li>
-                - Truy cập cửa hàng ứng dụng trên điện thoại di động của bạn.
-              </li>
-              <li>
-                - Tìm kiếm XYZ và nhấn vào nút Tải về hoặc Cài đặt để tải và cài
-                đặt ứng dụng.
-              </li>
-              <li>
-                - Sau khi hoàn tất quá trình cài đặt, nhấn vào biểu tượng XYZ để
-                mở ứng dụng
-              </li>
-            </ul>
-          </div>
-          <div className="mt-3">
-            <h1 className="text-gray-300">III. Lời kết</h1>
-            <ul className="text-gray-400 text-[14px] px-2">
-              <li>- Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi !!!</li>
-              <li>- Chúc bạn may mắn</li>
-            </ul>
+      <div className=" w-[90%] max-w-[800px] xl:max-w-[1000px] flex flex-col gap-3 mt-[80px] items-center">
+        <div className="border-t-4 border-l-2 border-[#00FFB2] w-full xl:max-w-[1200px] pl-12 pt-8 ">
+          <div className="xl:max-w-[900px] max-w-[700px]  ">
+            <h1 className="font text-2xl font-bold text-gradient">
+              Hướng dẫn sử dụng
+            </h1>
+            <div className="mt-3 pl-6 ">
+              <h1 className="text-white font mb-3 mt-6 text-xl font-[500]">
+                Cách tạo phòng hoặc tìm phòng
+              </h1>
+              <p className="text-gray-300 text-[18px] font">
+                Bạn có thể tạo phòng hoặc tìm phòng để tham gia vào phòng thi
+                bằng cách sử dụng các chức năng bên dưới :
+              </p>
+              <p className="text-gray-300 text-[18px]  font">
+                - Để tạo 1 phòng thi, bạn hãy chọn nút "Tạo phòng".
+              </p>
+              <p className="text-gray-300 text-[18px]  font">
+                - Để tham gia 1 phòng thi bạn hãy chọn nút "Tìm phòng" sau đó
+                bạn nhập ID phòng thi và ấn nút "Tham gia" để vào phòng.
+              </p>
+              <p className="text-gray-300 text-[18px]  font">
+                Sau khi vào phòng thi bạn hãy "Sẵn sàng" và chờ người chủ phòng
+                "Bắt đầu" cuộc thi. Khi đó bạn sẽ thấy được giao diện trang kết
+                quả, ở đây bạn có thể thấy được IP máy chủ, thời gian cuộc thi,
+                thứ hạng những người chơi khác.... Hãy cố gắng thu thập thật
+                nhiều Flag để tăng điểm, thứ hạng của bản thân.
+              </p>
+            </div>
           </div>
         </div>
-        <div className="w-full max-w-[1000px] mt-5 flex justify-center items-center gap-10">
+        <div className="w-full max-w-[1000px] mt-12 mb-12 flex justify-center items-center gap-10">
           {/* <button className="w-[250px] border h-[80px] textEdit text-gray-400 text-[24px] flex justify-center items-center transition-all hover:text-white hover:bg-red-400 ">
               Tạo Phòng
             </button>
