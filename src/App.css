@@ -1,0 +1,183 @@
+*,
+body {
+  /* font-family: "Brygada 1918", serif; */
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Roboto", sans-serif;
+  /* background: "#151D2A"; */
+  /* Thiết lập độ rộng và chiều cao cho scrollbar */
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    /* :hover{
+      width: 8px;
+      height: 8px;
+    } */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #b3b3b3;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+  }
+}
+
+@keyframes float-bob-y {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.float-bob-y {
+  animation: float-bob-y 2s infinite linear;
+}
+
+.lifecycle-learn {
+  background: linear-gradient(
+    105deg,
+    #08608a 0%,
+    #08608a 60%,
+    #161e2d 60%,
+    #161e2d 100%
+  );
+}
+
+.radius-learn {
+  background: linear-gradient(180deg, #191d55 0%, #0f112f 100%);
+}
+
+.radius-learn-path-top {
+  background: linear-gradient(180deg, #1d2539 0%, #155815 50%, #046969 100%);
+}
+.radius-learn-path-buttom {
+  background: linear-gradient(0deg, #191d55 0%, #155815 50%, #046969 100%);
+}
+
+.bg-custom-url {
+  background-image: url("https://tryhackme.com/img/lifecycle/learn.svg");
+  background-repeat: none;
+  width: 450px;
+  /* Các thuộc tính nền khác (ví dụ: background-size, background-repeat, ...) */
+}
+
+.button {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -4px;
+  top: -1px;
+  margin: auto;
+  width: 128px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.button::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.button:hover::after {
+  filter: blur(30px);
+}
+
+.button:hover::before {
+  transform: rotate(-180deg);
+}
+
+.button:active::before {
+  scale: 0.7;
+}
+.button {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -4px;
+  top: -1px;
+  margin: auto;
+  width: 128px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.button::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.button:hover::after {
+  filter: blur(30px);
+}
+
+.button:hover::before {
+  transform: rotate(-180deg);
+}
+
+.button:active::before {
+  scale: 0.7;
+}
+
+.textEdit {
+  font-family: "Playfair Display", serif;
+}
