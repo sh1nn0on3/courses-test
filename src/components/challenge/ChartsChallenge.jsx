@@ -22,7 +22,7 @@ const ChartsChallenge = () => {
         <div className=" max-w-[700px] w-full ">
           <div className="border bg-gray">
             <h1 className="text-gray-200 text-center py-3 text-2xl bg-gray-700">
-              Ranking Table
+              Bảng Xếp Hạng
             </h1>
             <div className="flex justify-end items-end">
               <RankChallenge />
@@ -44,22 +44,22 @@ const ChartsChallenge = () => {
               </thead>
               <tbody>
                 <tr className="h-[36px]">
-                  <td className="w-[80px] text-[18px] px-2 ">User </td>
+                  <td className="w-[170px] text-[18px] px-2 ">Tên người dùng  </td>
                   <td className="w-[10px]">:</td>
                   <td className="text-[18px] text-center">Nguyễn Văn A</td>
                 </tr>
                 <tr className="h-[36px] bg-gray-200">
-                  <td className="w-[80px] text-[18px] px-2 ">Code </td>
+                  <td className="w-[170px] text-[18px] px-2 ">Mã người dùng </td>
                   <td className="w-[10px]">:</td>
                   <td className="text-[18px] text-center">0001</td>
                 </tr>
                 <tr className="h-[36px]">
-                  <td className="w-[80px] text-[18px] px-2 ">Score </td>
+                  <td className="w-[170px] text-[18px] px-2 ">Điểm </td>
                   <td className="w-[10px]">:</td>
                   <td className="text-[18px] text-center">100</td>
                 </tr>
                 <tr className="h-[36px] bg-gray-200">
-                  <td className="w-[80px] text-[18px] px-2 ">Rank</td>
+                  <td className="w-[170px] text-[18px] px-2 ">Hạng</td>
                   <td className="w-[10px]">:</td>
                   <td className="text-[18px] text-center">1</td>
                 </tr>

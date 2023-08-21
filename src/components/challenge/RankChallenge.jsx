@@ -25,13 +25,13 @@ const RankChallenge = () => {
   rankingData.sort((a, b) => b.score - a.score);
 
   return (
-    <div className="h-[500px] overflow-y-auto w-full flex-col">
+    <div className="max-h-[650px] overflow-y-auto w-full flex-col">
       {/* Phần đầu (header) cố định */}
       <div className="sticky top-0 bg-white py-3 flex">
-        <p className="rank w-[15%] text-center">Rank</p>
-        <p className="code w-[15%] text-center">Code</p>
-        <p className="username w-[55%] text-center">UserName</p>
-        <p className="score w-[15%] text-center">Score</p>
+        <p className="rank w-[15%] text-center">Hạng</p>
+        <p className="code w-[25%] text-center">Mã người dùng</p>
+        <p className="username w-[35%] text-center">Tên người dùng</p>
+        <p className="score w-[25%] text-center">Điểm</p>
       </div>
       <table className="w-full">
         {rankingData.map((item, index) => (
@@ -48,9 +48,9 @@ const RankChallenge = () => {
               }`}
             >
               <td className="w-[15%] text-center">{index + 1}</td>
-              <td className="w-[15%] text-center">0000</td>
-              <td className="w-[55%] text-center">{item.username}</td>
-              <td className="w-[15%] text-center">{item.score}</td>
+              <td className="w-[25%] text-center">0000</td>
+              <td className="w-[35%] text-center">{item.username}</td>
+              <td className="w-[25%] text-center">{item.score}</td>
             </tr>
           </tbody>
         ))}

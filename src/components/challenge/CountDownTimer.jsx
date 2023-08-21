@@ -31,7 +31,7 @@ function CountDownTimer() {
   return (
     <div>
       <h1>
-        CountDown: {minutes} Min {seconds} sec
+        Thời gian: {minutes} phút {seconds} giây
       </h1>
     </div>
   );
