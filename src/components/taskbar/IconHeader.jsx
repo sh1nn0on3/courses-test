@@ -47,7 +47,7 @@ const IconHeader = () => {
           navigate("/homechallenge");
         }}
       >
-        <i className="fa-solid fa-khanda w-full text-center text-[28px]"></i>
+        <i className="fa-solid fa-khanda w-full text-center text-[28px] text-gradient "></i>
         <p className="text-[10px] mt-1 font-bold text-gray-300 ">Cyber Range</p>
       </div>
       <div

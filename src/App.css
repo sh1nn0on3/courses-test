@@ -182,11 +182,9 @@ body {
   font-family: "Playfair Display", serif;
 }
 
-
 .font {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
-
 
 .text-gradient {
   position: relative;
@@ -195,4 +193,8 @@ body {
   background: linear-gradient(to right, #56ccf2, #f79df2);
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.colorbxh:nth-child(1) {
+  background: #000;
 }

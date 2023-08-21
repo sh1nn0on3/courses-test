@@ -106,7 +106,7 @@ const PageChallenge = () => {
           <h1 className="text-center py-2 text-2xl rounded-t-md  text-gray-200 bg-gray-600 ">
             Phòng chat
           </h1>
-          <div className="border-none h-[700px] flex flex-col justify-end p-2 bg-gray-500  shadow-2xl rounded-b-md shadow-emerald-600 ">
+          <div className="border-none max-h-[700px] h-[80%]  xl:h-[85%]  flex flex-col justify-end p-2 bg-gray-500  shadow-2xl rounded-b-md shadow-emerald-600 ">
             <div
               className="message-list-container overflow-y-auto relative"
               style={{

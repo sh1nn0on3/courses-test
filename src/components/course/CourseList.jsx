@@ -123,18 +123,18 @@ const CourseList = () => {
                     className={`absolute bg-sky-300 w-full h-40 -top-2 -right-2 px-2 py-2 hover:top-0 hover:right-0 transition-all `}
                   >
                     <div className="flex justify-between px-2 items-center">
-                      <p className={`text-sky-600`}>{item.lessonName}</p>
+                      <p className={`text-sky-600 w-[150px] `}>{item.lessonName}</p>
                       <img
-                        src={item?.image}
+                        src="https://i0.wp.com/chiswickcalendar.co.uk/wp-content/uploads/2019/08/Man-in-the-middle-1-e1566060588315.jpg?w=1496&h=998&ssl=1"
                         alt="#"
-                        className="w-16 rounded-sm "
+                        className="w-12 rounded-sm h-12 object-cover "
                       />
                     </div>
-                    <div className="flex justify-end mt-[70px] ">
+                    <div className="flex justify-end mt-[50px] ">
                       <p
-                        className={`px-5 py-1 text-gray-50 text-[14px] bg-sky-500`}
+                        className={`px-5 py-1 text-gray-50 w-[80px] text-[14px] bg-sky-500`}
                       >
-                        0/100
+                        10/100
                       </p>
                     </div>
                   </div>

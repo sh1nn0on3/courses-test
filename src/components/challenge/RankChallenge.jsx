@@ -1,4 +1,3 @@
-import { Table } from "antd";
 const RankChallenge = () => {
   const rankingData = [
     { rank: 1, username: "User1", score: 100 },
@@ -24,47 +23,39 @@ const RankChallenge = () => {
   ];
 
   rankingData.sort((a, b) => b.score - a.score);
-  const columns = [
-    {
-      title: "Rank",
-      dataIndex: "index",
-      key: "index",
-      render: (_, record, index) => index + 1,
-    },
-    {
-      title: "Code",
-      dataIndex: "rank",
-      key: "rank",
-      className: "custom-column", // Thêm lớp CSS tùy chỉnh
-      render: (rank) => {
-        return rank < 10 ? `000${rank}` : `00${rank}`;
-      },
-    },
-    {
-      title: "Username",
-      dataIndex: "username",
-      key: "username",
-      className: "w-[400px]", // Thêm lớp CSS tùy chỉnh
-    },
-    {
-      title: "Score",
-      dataIndex: "score",
-      key: "score",
-      className: "custom-column", // Thêm lớp CSS tùy chỉnh
-    },
-  ];
-
-  const paginationConfig = {
-    pageSize: 10, // Số bản ghi hiển thị trên mỗi trang
-  };
 
   return (
-    <Table
-      dataSource={rankingData}
-      columns={columns}
-      className="w-full cursor-pointer"
-      pagination={paginationConfig} // Sử dụng phân trang
-    />
+    <div className="h-[500px] overflow-y-auto w-full flex-col">
+      {/* Phần đầu (header) cố định */}
+      <div className="sticky top-0 bg-white py-3 flex">
+        <p className="rank w-[15%] text-center">Rank</p>
+        <p className="code w-[15%] text-center">Code</p>
+        <p className="username w-[55%] text-center">UserName</p>
+        <p className="score w-[15%] text-center">Score</p>
+      </div>
+      <table className="w-full">
+        {rankingData.map((item, index) => (
+          <tbody className="" key={index}>
+            <tr
+              className={`h-[60px] border border-black    ${
+                index < 1
+                  ? "bg-red-200"
+                  : index < 2
+                  ? "bg-yellow-200"
+                  : index < 3
+                  ? "bg-blue-200"
+                  : "bg-gray-200"
+              }`}
+            >
+              <td className="w-[15%] text-center">{index + 1}</td>
+              <td className="w-[15%] text-center">0000</td>
+              <td className="w-[55%] text-center">{item.username}</td>
+              <td className="w-[15%] text-center">{item.score}</td>
+            </tr>
+          </tbody>
+        ))}
+      </table>
+    </div>
   );
 };
 
