@@ -17,7 +17,13 @@ const ChartsChallenge = () => {
     console.log("Form values:", values);
   };
   return (
-    <div className="w-full bg-[#0F102E] min-h-[calc(100vh-6rem)] snap-center flex justify-center">
+    <div className="w-full  min-h-[calc(100vh-6rem)] snap-center flex justify-center ">
+      <video autoPlay loop muted className="video-background">
+        <source
+          src="https://ddr-consent-taxi-celtic.trycloudflare.com/src/assets/videoBg.mp4"
+          type="video/mp4"
+        />
+      </video>
       <div className="max-w-[1200px] w-full flex gap-5 mt-[60px] ">
         <div className=" max-w-[700px] w-full ">
           <div className="border bg-gray">
@@ -29,6 +35,7 @@ const ChartsChallenge = () => {
             </div>
           </div>
         </div>
+
         <div className="ml-4 flex flex-col gap-5">
           <div className="w-[400px] bg-white px-5 py-2">
             <CountDownTimer />
@@ -44,12 +51,16 @@ const ChartsChallenge = () => {
               </thead>
               <tbody>
                 <tr className="h-[36px]">
-                  <td className="w-[170px] text-[18px] px-2 ">Tên người dùng  </td>
+                  <td className="w-[170px] text-[18px] px-2 ">
+                    Tên người dùng{" "}
+                  </td>
                   <td className="w-[10px]">:</td>
                   <td className="text-[18px] text-center">Nguyễn Văn A</td>
                 </tr>
                 <tr className="h-[36px] bg-gray-200">
-                  <td className="w-[170px] text-[18px] px-2 ">Mã người dùng </td>
+                  <td className="w-[170px] text-[18px] px-2 ">
+                    Mã người dùng{" "}
+                  </td>
                   <td className="w-[10px]">:</td>
                   <td className="text-[18px] text-center">0001</td>
                 </tr>
