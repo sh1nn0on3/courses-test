@@ -4,12 +4,15 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { GetCourse } from "../api/profile";
 
+
 const CouresDetail = () => {
   window.scrollTo(0, 0);
   let navigate = useNavigate();
   const { nameId } = useParams();
   const [dataId, setDataId] = useState([]);
 
+
+  console.log("🚀 ~ file: CouresDetail.jsx:16 ~ CouresDetail ~ apiKey:", apiKey)
   // const [courseDetail] = useContext(CourseContext);
 
   GetCourse();
@@ -18,6 +21,7 @@ const CouresDetail = () => {
     const res = axios
       .get(`http://103.28.174.29:4180/api/get-lesson?id=${nameId}`)
       .then((res) => setDataId(res.data.lesson));
+      console.log("🚀 ~ file: CouresDetail.jsx:25 ~ useEffect ~ apiKey:", apiKey)
   }, [nameId]);
 
   const demo = dataId;

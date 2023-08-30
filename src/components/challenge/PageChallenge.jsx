@@ -4,10 +4,13 @@ import { MessageList } from "react-chat-elements";
 import "react-chat-elements/dist/main.css";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import io from "socket.io-client";
+
 
 const PageChallenge = () => {
   const navigate = useNavigate();
-  const user = useSelector((state) => state.auth?.login.currentUser?.infor);
+  const user = useSelector((state) => state.auth?.login.currentUser);
+
   useEffect(() => {
     if (!user) {
       navigate("/login");
@@ -17,6 +20,51 @@ const PageChallenge = () => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
   const messageListRef = useRef(null);
+
+  useEffect(() => {
+    // Địa chỉ máy chủ Socket.IO
+    const serverUrl = 'http://localhost:3000';
+
+    // Tạo kết nối socket
+    const socket = io.connect(serverUrl , {
+      extraHeaders: {
+        Authorization: `Bearer ${user.token}`
+    }
+    });
+
+    // Lắng nghe sự kiện 'connect' khi kết nối thành công
+    socket.on('connect', () => {
+      console.log('Connected to server');
+
+      // Gửi yêu cầu tham gia vào phòng
+      socket.emit('join-room', '7846'); //roomId = 7846
+    });
+
+    // Lắng nghe sự kiện 'join-room' từ server
+    socket.on('join-room', (data) => {
+      console.log(data);
+
+      // Gửi yêu cầu bắt đầu trò chơi
+      socket.emit('start');
+    });
+
+    // Lắng nghe sự kiện 'start' từ server
+    socket.on('start', (serverInfo, leaderboard) => {
+      console.log('Server Information:', serverInfo);
+      console.log('Leaderboard:', leaderboard);
+    });
+
+    // Lắng nghe sự kiện 'update' từ server
+    socket.on('update', (leaderboard) => {
+      console.log('Leaderboard:', leaderboard);
+    });
+
+    // Đóng kết nối khi component unmount
+    return () => {
+      socket.disconnect();
+    };
+  }, []);
+
 
   const handleSendMessage = () => {
     if (newMessage.trim() === "") {
